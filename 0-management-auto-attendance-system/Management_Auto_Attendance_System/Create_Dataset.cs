@@ -98,7 +98,7 @@ namespace Management_Auto_Attendance_System
                     using (StreamWriter writetext = new StreamWriter("Dataset_Creator_Run.bat"))
                     {
                         writetext.WriteLine("call activate gr_gpu_env");
-                        writetext.WriteLine("python Dataset_Creator.py -e " + emp_id.Text + " -n " + numericUpDown1.Value);
+                        writetext.WriteLine("python dataset-creator.py -e " + emp_id.Text + " -n " + numericUpDown1.Value);
                         writetext.WriteLine("call activate gr_gpu_env");
 
                     }
