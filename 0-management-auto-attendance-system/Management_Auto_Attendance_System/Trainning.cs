@@ -169,9 +169,9 @@ namespace Management_Auto_Attendance_System
                 {
                     using (StreamWriter writetext = new StreamWriter("Training_Run.bat"))
                     {
-                        writetext.WriteLine("call activate gr_gpu_env");
+                        writetext.WriteLine("call activate ai_attendance_system_env");
                         writetext.WriteLine("python training.py -e " + emp_id.Text);
-                        writetext.WriteLine("call activate gr_gpu_env");
+                        writetext.WriteLine("call activate ai_attendance_system_env");
 
                     }
 
