@@ -96,8 +96,8 @@ namespace Management_Auto_Attendance_System
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Loading_Screen ls = new Loading_Screen();
-            ls.Show();
+            Form1 lo = new Form1();
+            lo.Show();
             this.Hide();
         }
 
