@@ -4,13 +4,40 @@
 
 Attendance Management keeps track of your employee or students present/absent details. It is the system to document the time your employees/students work and the time they take off.
 
-This is a computer vision based attendance system prototype that was developed for the DreamSpace Academy to manage the students attendances in a proper way.
+ In this digital era, face recognition system plays a vital role in  almost every  sector. Face recognition  is one  of the mostly used biometrics. It can used for security, authentication, identification.
 
-This system is using the QR technology as an identity to index the employees/students. Every students or employees will have an identity card that was printed with a QR code. When they scan the QR code, it takes attendance of the particular student or employee.
+This is an artificial intelligence based attendance management system with face recognition technology. The main objective of this AI based software solution is to update attendance with employees' face using computer vision.
 
-This computerized system is using a camera as the QR code reader, because it is based on computer vision technology.
-
-This system has two parts in it. The first one is the QR code scanner script that was written in Python, the second part is the management panel that is used to maintain and record attendance details (Written in C#).
+This project can be divided into two main sub-systems. Attendance receiver module also called as face scanner (Written in Python) for reading and updating attendance to the database, and management module (Written in C#) for creating datasets of employees, training AI models with GUI, entering employees details and other management relented operations .
 
 
-![](github-readme-content/qr-based-attendance-system-for-dreamspace-diagram.drawio.png)
+![](github-readme-content/diagram.png)
+
+
+## Features
+
+- Do not need to touch the device, the attendance can be done with face.
+- Training can be done with a single click.
+- It has a dataset creation module, where system can collect images of new employee.
+- An easy approach management panel.
+- Unauthorized access detection and prevention.
+- Voice outputs
+- Eye should be blinked to confirm the identify, this prevents digital image faking attack.
+
+
+## Technologies & Frameworks  
+
+#### Attendance Receiver - Face Scanner (Python)
+
+- Python - Main programming language.
+- OpenCV - for computer vision.
+- Face_Recognition module
+- Pyzbar module - for scanning QR code.
+- PYTTSX3 - a module for voice outputs.
+- Playsound - a module for playing external sounds.
+- mysql module - for database management
+- pickle module - store trained data as pickle file.
+
+#### Management Panel (CSharp)
+- C# - Main programming language
+- MySQL - Database.
