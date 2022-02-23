@@ -39,7 +39,7 @@ def talk_function(audio):
 	engine.runAndWait()
 
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 folder_name = args.emp_id
 total = args.number

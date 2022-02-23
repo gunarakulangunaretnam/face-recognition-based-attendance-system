@@ -41,3 +41,21 @@ This project can be divided into two main sub-systems. Attendance receiver modul
 #### Management Panel (CSharp)
 - C# - Main programming language
 - MySQL - Database.
+
+
+### Setup Management Panel (CSharp)
+
+##### Step 01:
+  - Create an empty database in MySQL panel with name of **"management_auto_attendance_system"**.
+
+![](github-readme-content/create-database.jpg)
+
+##### Step 02:
+
+  - Import into that empty database with a SQL database that is found on following folder of this repository **(attendance-system-with-face-recognition/1-database)**.
+
+
+  ![](github-readme-content/import-database.jpg)
+
+
+### Setup Attendance Receiver - Face Scanner (Python)
