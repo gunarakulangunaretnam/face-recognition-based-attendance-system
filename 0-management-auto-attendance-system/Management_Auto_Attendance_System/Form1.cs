@@ -73,8 +73,6 @@ namespace Management_Auto_Attendance_System
 
                 }
 
-
-
                 }
             catch (Exception)
             {

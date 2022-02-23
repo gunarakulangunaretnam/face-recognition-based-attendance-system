@@ -1,3 +1,3 @@
-call activate gr_dlib_env
+call activate ai_attendance_system_env
 python Run.py
-call activate gr_dlib_env
+call activate ai_attendance_system_env

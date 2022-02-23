@@ -137,7 +137,7 @@ def eye_aspect_ratio(eye):
     return ear
 
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 def Insert_to_database(Qurry, Data):
 
@@ -163,89 +163,6 @@ def MainSystem():
     #    Reset    #
     ###############
 
-    while True:
- 
-        success, img = cap.read()
-        img = imS = cv2.resize(img, (Screen_Width, Screen_Height))
-        #img = imS = cv2.resize(img, (screensize[0], screensize[1]))
-        #cv2.namedWindow("Display_1", cv2.WND_PROP_FULLSCREEN)
-        #cv2.setWindowProperty("Display_1",cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
-     
-        QRcodeData = decode(img)
-
-        if len(QRcodeData) !=0:
-            CodeType = QRcodeData[0][1]
-
-            if CodeType == "QRCODE":
-                
-                hiddenData = QRcodeData[0][0].decode('utf-8')
-
-                if Counter == 5:
-
-                	Counter = 0
-
-                	SelectDataCursor.execute("SELECT first_name, last_name FROM employees WHERE employee_id = '{}' AND is_model_available = 'True'".format(hiddenData))
-                	collecttedData = SelectDataCursor.fetchall()
-
-                	if not collecttedData:
-                		talk_function(random.choice(unauthorized_IDcard_Voice_Data))
-                	
-                	else:
-
-                		SelectDataCursor.execute("SELECT * FROM attendance WHERE _date = '{}' and employee_id = '{}' and out_time != ''".format(Global_Current_Date, hiddenData))
-                		AlreadyExit = SelectDataCursor.fetchall()
-
-                		if not AlreadyExit:             		
-                		
-	                		SelectDataCursor.execute("SELECT out_time FROM attendance WHERE employee_id = '{}'".format(hiddenData))
-	                		attendance_type_data = SelectDataCursor.fetchall()
-
-	                		if not attendance_type_data:
-	                			Attendance_Type = "Entering"
-
-	                		else:
-	                			Attendance_Type = "Exiting"
-
-	                		
-	                		Employee_ID = hiddenData
-	                		Employee_Name = collecttedData[0][0]+" "+collecttedData[0][1]
-	                		greeting = greeting_function()
-	                		
-	                		playsound("AttendanceSystemData\\QRSound.mp3")
-	                		
-	                		if Attendance_Type == "Entering":
-	                			talk_function("{} {}. {}".format(greeting,Employee_Name,random.choice(Entering_Voice_Data)))
-	                			
-
-	                		elif Attendance_Type == "Exiting":
-	                			talk_function("{} {}. {}".format(greeting,Employee_Name,random.choice(Exiting_Voice_Data)))
-	                			
-
-	                		cv2.destroyAllWindows()
-	                		break
-	                	
-	                	else:
-
-	                		talk_function(random.choice(Attendance_Already_Exit))
-
-
-                pts = np.array([QRcodeData[0][3]],np.int32)
-                pts = pts.reshape((-1,1,2))
-                cv2.polylines(img,[pts],True,(0,255,0),5)
-
-                Counter +=1
-
-        cv2.imshow('Display_1',img)
-        cv2.moveWindow('Display_1', Screen_Center_Width, Screen_Center_Height) ##center window
-        key = cv2.waitKey(1)
-
-
-        if key == 27:
-        	talk_function(random.choice(shutting_Down_Voices))
-        	exit()
-
-
-    talk_function(random.choice(blink_Eye_Voice_Data))
 
     while True:
 
