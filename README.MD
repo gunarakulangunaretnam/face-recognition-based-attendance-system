@@ -58,4 +58,5 @@ This project can be divided into two main sub-systems. Attendance receiver modul
   ![](github-readme-content/import-database.jpg)
 
 
+
 ### Setup Attendance Receiver - Face Scanner (Python)
