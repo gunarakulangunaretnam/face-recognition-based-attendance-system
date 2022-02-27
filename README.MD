@@ -60,3 +60,11 @@ This project can be divided into two main sub-systems. Attendance receiver modul
 
 
 ### Setup Attendance Receiver - Face Scanner (Python)
+
+The attendance receiver is the main script that takes attendances from employees and store in the database. This module handles OR code detection, face recognition processes.
+
+Setting up this attendance receiver is a bit tricky one since it contains many dependencies and framework installation.
+
+**Note:** We need to install all dependencies in a Python virtual environment in order to connect the management panel (C#) and attendances receiver (Python) properly. The virtual environment name must be **ai_attendance_system_env**. Because, the management panel (C#) listens for environment that has the name of **ai_attendance_system_env**.
+
+#### Create a Python virtual environment with the name of (ai_attendance_system_env)
