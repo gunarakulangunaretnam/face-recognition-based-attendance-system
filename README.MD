@@ -45,12 +45,12 @@ This project can be divided into two main sub-systems. Attendance receiver modul
 
 ### Setup Management Panel (CSharp)
 
-##### Step 01:
+#### Step 01:
   - Create an empty database in MySQL panel with name of **"management_auto_attendance_system"**.
 
 ![](github-readme-content/create-database.jpg)
 
-##### Step 02:
+#### Step 02:
 
   - Import into that empty database with a SQL database that is found on following folder of this repository **(attendance-system-with-face-recognition/1-database)**.
 
@@ -67,4 +67,92 @@ Setting up this attendance receiver is a bit tricky one since it contains many d
 
 **Note:** We need to install all dependencies in a Python virtual environment in order to connect the management panel (C#) and attendances receiver (Python) properly. The virtual environment name must be **ai_attendance_system_env**. Because, the management panel (C#) listens for environment that has the name of **ai_attendance_system_env**.
 
-#### Create a Python virtual environment with the name of (ai_attendance_system_env)
+### Create a Python virtual environment with the name of (ai_attendance_system_env)
+
+In this step, a python virtual environment needs to be created in order to setup the attendance receiver (Face Scanner) module. There are many environment management tools available such as Venv, Anaconda, Virtualenv and etc. Here, we are going to use the Anaconda Python distribution tool to manage environments and packages installation. Because, Anaconda usually use for advanced data science purpose.
+
+#### Step 01:
+
+  - Install Anaconda Python distribution.
+
+  ![](github-readme-content/anaconda-logo.png)
+
+Anaconda is a distribution of the Python and R programming languages for scientific computing (data science, machine learning applications, large-scale data processing, predictive analytics, etc.), that aims to simplify package management and deployment.
+
+In order to install the Anaconda distribution, please checkout the official website for the instructions (https://www.anaconda.com/).
+
+Download Anaconda: https://www.anaconda.com/products/individual
+
+Anaconda installation tutorial: https://www.youtube.com/watch?v=RYSNnp5V7ps&t
+
+Anaconda Documentation: https://docs.anaconda.com/
+
+#### Step 02:
+
+ - Create a virtual environment using Anaconda.
+
+At its core, the main purpose of Python virtual environments is to create an isolated environment for Python projects. This means that each project can have its own dependencies, regardless of what dependencies every other project has.
+
+  ![](github-readme-content/env.png)
+
+ - Enter the bellow command in Terminal/CMD after the successful installation of Anaconda.
+
+ ```cmd
+ conda create -n ai_attendance_system_env python=3.6
+```
+
+  ![](github-readme-content/create-env.jpg)
+
+At this point, we are creating a virtual environment with the name of "ai_attendance_system_env" and this environment is using python 3.6.
+
+**Note:** The environment name must be "ai_attendance_system_env".
+
+
+#### Step 03:
+  - Activate the "ai_attendance_system_env" environment.
+
+  ```cmd
+    conda activate ai_attendance_system_env
+  ```
+  ![](github-readme-content/activate-env.jpg)
+
+
+**Note:** After the activation, If we install a dependency, it will be installed under this environment.
+
+#### Step 04:
+
+- Install the following dependencies on the "ai_attendance_system_env" environment.
+
+
+```cmd
+  pip install opencv-python
+```
+
+```cmd
+  pip install pyttsx3
+```
+
+```cmd
+  pip install cmake
+```
+
+```cmd
+  pip install face_recognition
+```
+
+```cmd
+  pip install imutils
+```
+
+```cmd
+  pip install playsound
+```
+
+```cmd
+  pip install mysql-connector-python
+```
+
+
+```cmd
+  pip install qrcode
+```
