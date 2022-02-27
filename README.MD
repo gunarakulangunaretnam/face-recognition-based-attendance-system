@@ -156,3 +156,5 @@ At this point, we are creating a virtual environment with the name of "ai_attend
 ```cmd
   pip install qrcode
 ```
+
+**Note:** These are the important dependencies of the attendance receiver (Python) module. These dependencies must be installed  under the "ai_attendance_system_env" environment.
