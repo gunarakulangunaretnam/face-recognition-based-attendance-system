@@ -164,10 +164,11 @@ At this point, we are creating a virtual environment with the name of "ai_attend
 There are 3 main python scripts that are the backbone of this project.
 
 - dataset-creator.py
-- run.py
 - training.py
+- run.py
 
-- The scripts are found on the following directory
+
+The scripts are found on the following directory
 
 ```cmd
   attendance-system-with-face-recognition\0-management-auto-attendance-system\Management_Auto_Attendance_System\bin\Debug
@@ -182,7 +183,13 @@ A Python script for creating employees' face dataset for training. This script i
 **Note:** This script is executed (trigger) from the C# management panel whenever the admin register employees into the database.
 
 
-#### 02. run.py script explained
+#### 02. training.py script explained
+
+A Python script for training face recognition models for employees. After the dataset has generated. Now, it's time to train the face recognition model for that registered employee. For this task, training.py script will be used.
+
+**Note:** This script is executed (trigger) from the C# management panel. There is a sub-module in management panel (C#) called "Training", we can simply train a machine learning model with a single click. When training happens, this Python script is execute by C# management panel.
+
+#### 03. run.py script explained
 
 The main Python script that does the attendance receiving process. This script is huge, because,  this script acts as the attendance receiver module. This single file contains many functions such as QR-code detection, eye-blinking detection, updating attendance in the database and etc.
 
