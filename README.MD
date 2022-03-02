@@ -175,14 +175,14 @@ There are 3 main python scripts that are the backbone of this project.
 
   ![](github-readme-content/files.jpg)
 
-#### dataset-creator.py script explained
+#### 01. dataset-creator.py script explained
 
 A Python script for creating employees' face dataset for training. This script is written in Python and, it is used to take snapshots of employees' face and generate dataset from it.
 
 **Note:** This script is executed (trigger) from the C# management panel whenever the admin register employees into the database.
 
 
-#### run.py script explained
+#### 02. run.py script explained
 
 The main Python script that does the attendance receiving process. This script is huge, because,  this script acts as the attendance receiver module. This single file contains many functions such as QR-code detection, eye-blinking detection, updating attendance in the database and etc.
 
