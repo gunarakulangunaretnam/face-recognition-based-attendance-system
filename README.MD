@@ -173,8 +173,7 @@ There are 3 main python scripts that are the backbone of this project.
   attendance-system-with-face-recognition\0-management-auto-attendance-system\Management_Auto_Attendance_System\bin\Debug
 ```
 
-
-
+  ![](github-readme-content/files.jpg)
 
 #### dataset-creator.py script explained
 
