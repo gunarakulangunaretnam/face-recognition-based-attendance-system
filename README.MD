@@ -158,3 +158,33 @@ At this point, we are creating a virtual environment with the name of "ai_attend
 ```
 
 **Note:** These are the important dependencies of the attendance receiver (Python) module. These dependencies must be installed  under the "ai_attendance_system_env" environment.
+
+### Explained main python scripts of this project.
+
+There are 3 main python scripts that are the backbone of this project.
+
+- dataset-creator.py
+- run.py
+- training.py
+
+- The scripts are found on the following directory
+
+```cmd
+  attendance-system-with-face-recognition\0-management-auto-attendance-system\Management_Auto_Attendance_System\bin\Debug
+```
+
+
+
+
+#### dataset-creator.py script explained
+
+A Python script for creating employees' face dataset for training. This script is written in Python and, it is used to take snapshots of employees' face and generate dataset from it.
+
+**Note:** This script is executed (trigger) from the C# management panel whenever the admin register employees into the database.
+
+
+#### run.py script explained
+
+The main Python script that does the attendance receiving process. This script is huge, because,  this script acts as the attendance receiver module. This single file contains many functions such as QR-code detection, eye-blinking detection, updating attendance in the database and etc.
+
+**Note:** This script could be run manually. There is a run.bat file in the project folder where we can click that file and execute to the attendance receiver module.
