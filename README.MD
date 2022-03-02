@@ -191,6 +191,19 @@ A Python script for training face recognition models for employees. After the da
 
 #### 03. run.py script explained
 
-The main Python script that does the attendance receiving process. This script is huge, because,  this script acts as the attendance receiver module. This single file contains many functions such as QR-code detection, eye-blinking detection, updating attendance in the database and etc.
+The main Python script that does the attendance receiving process. This script is huge, because,  this script acts as the attendance receiver module. This single file contains many functions such as QR-code scanning, eye-blinking detection & face verification, updating attendance in the database and etc.
 
 **Note:** This script could be run manually. There is a run.bat file in the project folder where we can click that file and execute to the attendance receiver module.
+
+
+### Explained Attendance Receiver
+
+Attendance receiver has 4 main following functions.
+
+- Scan QR-Code and Validation.
+- Load ML model of the scanned QR-Code.
+- Eye-blinking detection & face verification.
+- Update attendance to database.
+
+
+![](github-readme-content/attendance-receiver-diagram.drawio.png)
