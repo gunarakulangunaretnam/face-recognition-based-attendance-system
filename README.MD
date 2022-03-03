@@ -29,7 +29,7 @@ This project can be divided into two main sub-systems. Attendance receiver modul
 
 #### Attendance Receiver - Face Scanner (Python)
 
-- Python3 - Main programming language.
+- Python 3.6 - Main programming language.
 - OpenCV - for computer vision.
 - Face_Recognition module
 - Pyzbar module - for scanning QR code.
@@ -216,3 +216,5 @@ To run (execute) the attendance receiver, please open the following batch script
 ```
 
 ![](github-readme-content/attendance-receiver.gif)
+
+This module updates attendance to the database after completing these procedures. Scan QR code, blink eyes.
