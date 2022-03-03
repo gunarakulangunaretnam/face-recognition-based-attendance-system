@@ -89,23 +89,34 @@ Anaconda Documentation: https://docs.anaconda.com/
 
 #### Step 02:
 
+
+##### Easy setup
+
+**NOTE :** If you want to setup the environment easily without installing dependencies one by one manually, run the **environment.yml** file using the bellow command. If setup the environment using bellow command, you don't need to follow the step 04 instructions.  
+
+```cmd
+  conda env create -f environment.yml  
+```
+
+##### Manual setup
+
  - Create a virtual environment using Anaconda.
 
 At its core, the main purpose of Python virtual environments is to create an isolated environment for Python projects. This means that each project can have its own dependencies, regardless of what dependencies every other project has.
 
   ![](github-readme-content/env.png)
 
- - Enter the bellow command in Terminal/CMD after the successful installation of Anaconda.
+- Enter the bellow command in Terminal/CMD after the successful installation of Anaconda.
 
- ```cmd
+```cmd
  conda create -n ai_attendance_system_env python=3.6
 ```
 
-  ![](github-readme-content/create-env.jpg)
+![](github-readme-content/create-env.jpg)
 
 At this point, we are creating a virtual environment with the name of "ai_attendance_system_env" and this environment is using python 3.6.
 
-**Note:** The environment name must be "ai_attendance_system_env".
+**Note 1:** The environment name must be "ai_attendance_system_env".
 
 
 #### Step 03:
@@ -162,7 +173,14 @@ At this point, we are creating a virtual environment with the name of "ai_attend
 **Note:** These are the important dependencies of the attendance receiver (Python) module. These dependencies must be installed  under the "ai_attendance_system_env" environment.
 
 
-**IMPORTANT NOTE:** When you install a dependency by using "pip install", it will install the latest version of the dependency. Sometimes, we need the exact version that is used in the project. **To find the dependencies' version, please check out 'required-dependencies.txt'** that is found on the project folder.
+**IMPORTANT NOTE 1:** When you install a dependency by using "pip install", it will install the latest version of the dependency. Sometimes, we need the exact version that is used in the project. **To find the dependencies' version, please check out 'required-dependencies.txt'** that is found on the project folder.
+
+
+**IMPORTANT NOTE 2:** If you are setting up this project in a virtual environment, the environment can be easily setup using the **environment.yml** file using the bellow command.
+
+```cmd
+  conda env create -f environment.yml  
+```
 
 ### Explained main python scripts of this project.
 
