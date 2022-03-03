@@ -121,7 +121,7 @@ At this point, we are creating a virtual environment with the name of "ai_attend
 
 #### Step 04:
 
-- Install the following dependencies on the "ai_attendance_system_env" environment.
+- Install the following dependencies on the "ai_attendance_system_env" environment (Python 3.6).
 
 
 ```cmd
@@ -157,7 +157,12 @@ At this point, we are creating a virtual environment with the name of "ai_attend
   pip install qrcode
 ```
 
+
+
 **Note:** These are the important dependencies of the attendance receiver (Python) module. These dependencies must be installed  under the "ai_attendance_system_env" environment.
+
+
+**IMPORTANT NOTE:** When you install a dependency by using "pip install", it will install the latest version of the dependency. Sometimes, we need the exact version that is used in the project. **To find the dependencies' version, please check out 'required-dependencies.txt'** that is found on the project folder.
 
 ### Explained main python scripts of this project.
 
