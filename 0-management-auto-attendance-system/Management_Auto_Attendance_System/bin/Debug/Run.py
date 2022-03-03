@@ -9,7 +9,7 @@ from imutils import face_utils
 import imutils
 import time
 import dlib
-from playsound import playsound
+import playsound
 import mysql.connector
 import face_recognition
 import pickle
@@ -137,7 +137,7 @@ def eye_aspect_ratio(eye):
     return ear
 
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 def Insert_to_database(Qurry, Data):
 
@@ -211,7 +211,7 @@ def MainSystem():
 	                		Employee_Name = collecttedData[0][0]+" "+collecttedData[0][1]
 	                		greeting = greeting_function()
 	                		
-	                		playsound("AttendanceSystemData\\QRSound.mp3")
+	                		playsound.playsound("AttendanceSystemData\\qr-sound.mp3")
 	                		
 	                		if Attendance_Type == "Entering":
 	                			talk_function("{} {}. {}".format(greeting,Employee_Name,random.choice(Entering_Voice_Data)))
@@ -301,7 +301,7 @@ def MainSystem():
         if TOTAL_Blinks == 2:
         	TOTAL_Blinks = 0
         	cv2.imwrite("Cache/CacheImg.jpg",CacheFrame)
-        	playsound("AttendanceSystemData\\blinkSound.mp3")
+        	playsound.playsound("AttendanceSystemData\\blink-sound.mp3")
         	data = pickle.loads(open("Trained_Models\\{}\\{}_(Model).pickle".format(Employee_ID,Employee_ID), "rb").read())
         	image = cv2.imread("Cache\\CacheImg.jpg")
         	rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)

@@ -29,7 +29,7 @@ This project can be divided into two main sub-systems. Attendance receiver modul
 
 #### Attendance Receiver - Face Scanner (Python)
 
-- Python - Main programming language.
+- Python3 - Main programming language.
 - OpenCV - for computer vision.
 - Face_Recognition module
 - Pyzbar module - for scanning QR code.
@@ -145,7 +145,7 @@ At this point, we are creating a virtual environment with the name of "ai_attend
 ```
 
 ```cmd
-  pip install playsound
+  pip install playsound==1.2.2
 ```
 
 ```cmd
@@ -207,3 +207,12 @@ Attendance receiver has 4 main following functions.
 
 
 ![](github-readme-content/attendance-receiver-diagram.drawio.png)
+
+
+To run (execute) the attendance receiver, please open the following batch script that is found the following directory.
+
+```cmd
+  attendance-system-with-face-recognition\0-management-auto-attendance-system\Management_Auto_Attendance_System\bin\Debug\run.bat
+```
+
+![](github-readme-content/attendance-receiver.gif)
