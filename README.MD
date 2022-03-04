@@ -305,7 +305,7 @@ The management panel dashboard is the central are of all features' accesses and 
 
 The main function of this module is to register employees to the database. The system admin needs to enter some basic information of an employee including a headshot photo.
 
-#### Features
+##### Features
 
 - Insert employees details
 - Add headshot photo
@@ -316,7 +316,7 @@ The main function of this module is to register employees to the database. The s
 
 This main function of this module is to update/edit employees' details in the database. It also has function to delete employees.
 
-#### Features
+##### Features
 
 - Edit employees details
 - Delete employees
@@ -334,15 +334,18 @@ After selecting the employee ID and number of images, the admin will click the "
 
 The bellow table shows up all the datasets that are already been taken. The admin can delete a dataset using this module, and able search datasets using Employee ID, Full Name.
 
-#### Features
+##### Features
 
 - Create datasets
 - Delete datasets
 - Search datasets by Employee ID, Full Name
 
 
-#### Image Capturing Process.
+##### Image Capturing Process.
 
 This Python script will be trigger when clicking the green "Start Capturing" button by the C# with the help of a batch script.
 
 ![](github-readme-content/dataset-creator.gif)
+
+
+#### Create Dataset
