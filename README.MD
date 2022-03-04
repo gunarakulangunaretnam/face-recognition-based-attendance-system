@@ -220,7 +220,9 @@ The main Python script that does the attendance receiving process. This script i
 
 ### Explained Attendance Receiver
 
-Attendance receiver has 4 main following functions.
+Attendance receiver is the main module that takes attendance (Python) and update to the database. Then, the database is maintained and managed by the management panel(C#).
+
+#### Features
 
 - Scan QR-Code and Validation.
 - Load ML model of the scanned QR-Code.
@@ -240,3 +242,59 @@ To run (execute) the attendance receiver, please open the following batch script
 ![](github-readme-content/attendance-receiver.gif)
 
 This module updates attendance to the database after completing these procedures. Scan QR code, blink eyes.
+
+
+### Explained Management Panel (C#)
+
+The management panel (C#) is the key component, that handles the database and management part of the system.
+
+The database setup has been already finished in the above section (Setup Management Panel C#).
+
+#### Features
+
+- Insert Employees
+- Edit Employees data
+- Create dataset of employees face
+- Train AI model with single click
+- Analyze & manage attendance data
+
+#### Credentials
+- Username: **admin**
+- Username: **kuna123**
+
+#### Splash Screen
+
+![](github-readme-content/loading-screen.jpg)
+
+The splash screen is the loading screen of the management system.
+
+
+#### Login Screen
+
+![](github-readme-content/loggin-screen.jpg)
+
+The login screen is the authentication section of the management system. Currently, this module has only admin account.
+
+##### Credentials
+- Username: **admin**
+- Username: **kuna123**
+
+
+#### Dashboard
+
+![](github-readme-content/dashboard.jpg)
+
+The management panel dashboard is the central are of all features' accesses and usages.
+
+##### Dashboard Structure
+
+- Manage
+  - Manage Employees
+    - Insert Employees
+    - Modify Employees
+  - Create Dataset
+  - Training
+- Attendance Report
+- Face Verification
+- Settings
+- Logout
