@@ -243,6 +243,9 @@ To run (execute) the attendance receiver, please open the following batch script
 
 This module updates attendance to the database after completing these procedures. Scan QR code, blink eyes.
 
+**Note 1:** If the user presses the (Space bar) key during the face verification part, the system will be restarted, and begin from QR-Code scan section. This is implemented to avoid some confliction in the project.   
+
+**Note 2:** If the user presses the (Enter) key during the face verification part, the system will ignore the face verification part and update attendance as present in the database. The reason why it is implemented, errors happens always in computer vision and machine learning applications. Sometimes, It is not able to recognize the employee face due to some issue like lighting, with facial hair, insufficient face images and etc. To avoid these types of issue, the user can pass out after QR-Code scan by pressing the enter key during the face verification part. This feature will be removed in future versions once, the system has the capable to recognize face more accurately. If a user pass out via pressing the "Enter" key, the attendance will be updated in NOT FACE VERIFIED mode, then the system admin will show that face manually in the Management System (C#) and verify the face.
 
 ### Explained Management Panel (C#)
 
@@ -348,4 +351,63 @@ This Python script will be trigger when clicking the green "Start Capturing" but
 ![](github-readme-content/dataset-creator.gif)
 
 
-#### Create Dataset
+#### Training
+
+The primary function of this module is to train a machine learning model for the face recognition task, of a particular employee with the captured face image samples.
+
+![](github-readme-content/training.jpg)
+
+It lists out all the employees' ids in the first dropdown select box who DOES NOT have a face recognition machine learning model.
+
+The admin will select an employee that needs face recognition model, and then the admin can simply click the "Start Training" button to begin the training process.
+
+![](github-readme-content/training-section.gif)
+
+The bellow table lists out all the trained models, from there, the admin can delete or search ML model of a particular employee.
+
+
+##### Generate QR Code
+
+**Note:** After the training finishes, the system will automatically generate a QR-Code for that particular employee, this QR-Code will be printed in the employee's ID card.
+
+The employee will show this QR-Code to load his model to verify his face by blinking his/her eyes to update the attendance record to the database.
+
+![](github-readme-content/qr-code.jpg)
+
+##### Features
+
+- Single click model training.
+- Generate QR code for the particular employee.
+- Delete ML models.
+- Search ML models using Employee ID, Full Name.
+
+
+
+##### Training Algorithm
+
+We are using 128d (FaceNet) face embeddings agriculture for model training process. During the training process, the it collects and organize 128d face embeddings in a vector, then those data are stored in a pickle format as a model to use later in the attendance receiver module when verifying faces.
+
+FaceNet takes an image of the person’s face as input and outputs a vector of 128 numbers which represent the most important features of a face. In machine learning, this vector is called embedding. Why embedding? Because all the important information from an image is embedded into this vector. Basically, FaceNet takes a person’s face and compresses it into a vector of 128 numbers. Ideally, embeddings of similar faces are also similar.
+
+Mapping high-dimensional data (like images) into low-dimensional representations (embeddings) has become a fairly common practice in machine learning these days
+
+![](github-readme-content/facenet1.jpg)
+
+![](github-readme-content/facenet2.jpg)
+
+
+#### Attendance Report
+
+![](github-readme-content/attendance-report.gif)
+
+This module is the place where the attendance details are managed & maintained. It will show who are present on particular date.  
+
+##### Features
+- List all attendances data
+- List all attendance based on a particular date.
+- List all attendance based on status (Absent, Present)
+- Export table data in Excel file.
+- Good Filter and search options.
+
+
+#### Face Verification
