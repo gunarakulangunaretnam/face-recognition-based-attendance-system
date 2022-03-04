@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2020 at 06:17 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Mar 04, 2022 at 09:35 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -45,10 +44,7 @@ CREATE TABLE `attendance` (
 --
 
 INSERT INTO `attendance` (`auto_id`, `employee_id`, `in_time`, `out_time`, `_date`, `face_recognition_entering`, `face_recognition_exiting`, `face_recognition_entering_img_path`, `face_recognition_exiting_img_path`) VALUES
-(20, '123', '01:35:52 AM', '12:22:03 PM', '18-08-2020', 'False', 'True', '18-Aug-2020_(01-35-52-290080)_Entering.jpg', ''),
-(21, '1234', '08:08:07 PM', '10:43:14 AM', '24-08-2020', 'True', 'True', '', ''),
-(22, '4567', '07:11:39 PM', '07:12:07 PM', '22-09-2020', 'True', 'True', '', ''),
-(23, 'th2345', '09:04:35 PM', '', '29-09-2020', 'True', '', '', '');
+(33, '0001', '02:44:42 PM', '', '03-03-2022', 'True', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -69,12 +65,7 @@ CREATE TABLE `datasets` (
 --
 
 INSERT INTO `datasets` (`auto_id`, `employee_id`, `full_name`, `number_of_images`, `created_date`) VALUES
-(1, '123', 'kuna rajkj', '15', '09-08-2020'),
-(3, 'new', 'dksjadk jklj', '20', '10-08-2020'),
-(4, 'kj', 'kljkljlk jklj', '15', '13-08-2020'),
-(5, '1234', 'Thusy illanko', '15', '24-08-2020'),
-(6, '4567', 'Sathu Sathu', '15', '22-09-2020'),
-(7, 'th2345', 'Thulkifly Zuahir', '15', '29-09-2020');
+(8, '0001', 'Gunarakulan Gunaretnam', '15', '03-03-2022');
 
 -- --------------------------------------------------------
 
@@ -105,13 +96,8 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`auto_id`, `employee_id`, `first_name`, `last_name`, `dob`, `gender`, `job_title`, `nic`, `phone_no`, `address`, `email_address`, `marital_status`, `photo_path`, `is_dataset_available`, `is_model_available`) VALUES
-(29, '123', 'kuna', 'rajkj', 'kljkljklj', 'Male', 'jkjlkjlk', 'jkljlkjl', 'jkljlkjlk', 'jkljkljkl', 'jkjl', 'Single', 'No_Image', 'True', 'True'),
-(30, 'new', 'dksjadk', 'jklj', 'kljlkj', 'Male', 'jkjkl', ' jkjlkjkl', 'kljkljkljkljklj', 'jkkljkljkljkl', 'jkljkljlk', 'Single', 'No_Image', 'True', 'False'),
-(31, 'jhjk', 'hjkhjk', 'hjkh', 'jkhjk', 'Male', 'hjkhjk', 'hjkhjk', 'hjkhjk', 'hjkh', 'jkhjkhjk', 'Single', 'No_Image', 'False', 'True'),
-(32, 'kj', 'kljkljlk', 'jklj', 'kljlkj', 'Male', 'jjlkjkl', ' hjhjkhkj', 'jlkjlkjhjkhkjh', 'jkhjkhkjh', 'jkhjkhjk', 'Single', 'No_Image', 'True', 'False'),
-(33, '1234', 'Thusy', 'illanko', '10/10/1099', 'Male', 'jdkasjl', 'jlkj', 'kljklj', 'lkjkl', 'jkljlk', 'Single', 'No_Image', 'True', 'True'),
-(34, '4567', 'Sathu', 'Sathu', 'jsdfjkl', 'Male', 'jdksjkldjl', 'jkljkl', 'jklj', 'kljkl', 'jklj', 'Single', 'No_Image', 'True', 'True'),
-(35, 'th2345', 'Thulkifly', 'Zuahir', 'dlsak', 'Male', ' klkl;k;l', ' klkl;k', 'k;l', 'kl;k;l', 'klklkl', 'Single', 'No_Image', 'True', 'True');
+(36, '0001', 'Gunarakulan', 'Gunaretnam', '1997-01-11', 'Male', 'Software Developer', '970110720V', '12435789', '345768', 'e43257689', 'Single', 'No_Image', 'True', 'True'),
+(37, '0002', 'David', 'Mike', '123456', 'Female', 'dsadsad', '3245476453', '456543542132', '56543542132', '35241435', 'Single', 'No_Image', 'False', 'False');
 
 -- --------------------------------------------------------
 
@@ -132,11 +118,7 @@ CREATE TABLE `training` (
 --
 
 INSERT INTO `training` (`auto_id`, `employee_id`, `full_name`, `number_of_trained_images`, `trained_date`) VALUES
-(3, 'jhjk', 'hjkhjk hjkh', '15', '10-08-2020'),
-(4, '123', 'kuna rajkj', '15', '10-08-2020'),
-(5, '1234', 'Thusy illanko', '15', '24-08-2020'),
-(6, '4567', 'Sathu Sathu', '15', '22-09-2020'),
-(7, 'th2345', 'Thulkifly Zuahir', '15', '29-09-2020');
+(8, '0001', 'Gunarakulan Gunaretnam', '15', '03-03-2022');
 
 -- --------------------------------------------------------
 
@@ -199,25 +181,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `datasets`
 --
 ALTER TABLE `datasets`
-  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `training`
 --
 ALTER TABLE `training`
-  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `auto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
