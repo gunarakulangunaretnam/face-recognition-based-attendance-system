@@ -298,3 +298,51 @@ The management panel dashboard is the central are of all features' accesses and 
 - Face Verification
 - Settings
 - Logout
+
+#### Manage Employees (Insert Employees Module)
+
+![](github-readme-content/manage-insert-employee.jpg)
+
+The main function of this module is to register employees to the database. The system admin needs to enter some basic information of an employee including a headshot photo.
+
+#### Features
+
+- Insert employees details
+- Add headshot photo
+
+#### Manage Employees (Modify Employees Module)
+
+![](github-readme-content/manage-employees-modify-employees.jpg)
+
+This main function of this module is to update/edit employees' details in the database. It also has function to delete employees.
+
+#### Features
+
+- Edit employees details
+- Delete employees
+- Search employees by Employee ID, NIC Card No, First Name, Phone Number.  
+
+#### Create Dataset
+
+![](github-readme-content/create-dataset.jpg)
+
+This module is responsible for creating & managing datasets of employees' face. It lists out all the employees' ids in the first dropdown select box who DOES NOT have dataset.
+
+From the second select box, the admin needs to set the number of image samples that is needed for the model training.
+
+After selecting the employee ID and number of images, the admin will click the "Start Capturing" green button, then a Python script will be trigger by the C# with the help of a Batch script to take employees' face sample images to train a machine learning model for face recognition task.
+
+The bellow table shows up all the datasets that are already been taken. The admin can delete a dataset using this module, and able search datasets using Employee ID, Full Name.
+
+#### Features
+
+- Create datasets
+- Delete datasets
+- Search datasets by Employee ID, Full Name
+
+
+#### Image Capturing Process.
+
+This Python script will be trigger when clicking the green "Start Capturing" button by the C# with the help of a batch script.
+
+![](github-readme-content/dataset-creator.gif)
