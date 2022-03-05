@@ -16,6 +16,9 @@ This project can be divided into two main sub-systems. Attendance receiver modul
 
 ## Features
 
+- Entering Attendances with time &  Leaving Attendances with time.
+- First time it will update the entering attendance.
+- Second time, it will update leaving attendance.
 - Do not need to touch the device, the attendance can be done with face.
 - Training can be done with a single click.
 - It has a dataset creation module, where system can collect images of new employee.
@@ -411,3 +414,62 @@ This module is the place where the attendance details are managed & maintained. 
 
 
 #### Face Verification
+
+
+This module is used to avoid run time errors during face verification part. For an example,
+if an employee’s face has not trained well, lighting issue or facial hair issue, the system will find difficult
+to verify employee's face. Therefore, the employee would be unable to pass out
+the attendance, to sort out this issue, the employee can skip the face verification
+step via pressing the “Enter key”. However, the attendance will be marked as unverified
+face in the database. Then, it will be reviewed by the system admin manually.
+
+This module will list all the attendances that are not face verified. From this table, the system admin will manually verify the face.
+
+![](github-readme-content/face-verify-2.jpg)
+
+![](github-readme-content/face-verify.jpg)
+
+The system admin will see these images and manually verify them via clicking the "Verify Face" button.
+
+##### Features
+
+- Verify Face
+- Show images
+
+#### Settings
+
+This module is the setting part of the system. From this module, the system admin can change the preferences.
+
+##### Features
+
+- Change username
+- Change Password
+- Turn on/off face verification
+
+![](github-readme-content/setttings.jpg)
+
+
+## Others & References
+
+#### To change camera index in python script.
+
+![](github-readme-content/ref1.jpg)
+
+There are 2 main Python scripts that are using OpenCV, those are dataset-creator.py and run.py.
+
+```python
+  cap = cv2.VideoCapture(0)
+```
+
+The index "0" means, it is using the first attached camera of the computer/device, If the computer/device has more than 1 cameras, they can be switched by changing the index that means, 0 is first camera, 1 is second camera, 2 means third camera and etc.
+
+If we're trying to run this application with a second camera, we should change these in dataset-creator.py and run.py Python scripts.
+
+Any Questions? | Conduct Me
+---
+
+* [Linkedin Profile](https://www.linkedin.com/in/gunarakulan-gunaretnam-161119156/)
+* [Facebook Profile](https://www.facebook.com/gunarakulan)
+* [Twitter Profile](https://twitter.com/gunarakulang)
+* [Instagram Profile](https://www.instagram.com/gunarakulan_gunaretnam/)
+* [Youtube Channel](https://www.youtube.com/channel/UCMWkED5sabgVZSCKjZuRJXA/videos)
