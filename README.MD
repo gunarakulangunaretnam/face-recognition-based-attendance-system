@@ -465,11 +465,12 @@ The index "0" means, it is using the first attached camera of the computer/devic
 
 If we're trying to run this application with a second camera, we should change these in dataset-creator.py and run.py Python scripts.
 
-Social Media Links
----
+## Social Links
 
-* [Linkedin Profile](https://www.linkedin.com/in/gunarakulangunaretnam/)
-* [Facebook Page](https://www.facebook.com/gunarakulangunaretnam)
-* [Twitter Profile](https://twitter.com/gunarakulan)
-* [Instagram Profile](https://www.instagram.com/gunarakulangunaretnam/)
-* [Youtube Channel](https://www.youtube.com/channel/UCMWkED5sabgVZSCKjZuRJXA)
+* [Linkedin Profile](https://www.linkedin.com/in/gunarakulangunaretnam)
+* [Facebook Profile](https://www.facebook.com/gunarakulangr.page)
+* [Instagram Profile](https://www.instagram.com/gunarakulangunaretnam)
+* [Twitter Profile ](https://twitter.com/gunarakulangr)
+* [Kaggle Profile](https://www.kaggle.com/gunarakulangr)
+* [TikTok Profile](https://www.tiktok.com/@gunarakulangunaretnam)
+* [Youtube Profile](https://www.youtube.com/channel/UCMWkED5sabgVZSCKjZuRJXA)
