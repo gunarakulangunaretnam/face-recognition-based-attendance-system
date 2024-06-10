@@ -1,4 +1,4 @@
-# ATTENDANCE SYSTEM WITH FACE RECOGNITION
+# Attendance System With Face Recognition
 
 ## Introduction
 
@@ -465,7 +465,7 @@ The index "0" means, it is using the first attached camera of the computer/devic
 
 If we're trying to run this application with a second camera, we should change these in dataset-creator.py and run.py Python scripts.
 
-# CONTACT
+# Contact
 
 ### Website: 
 
